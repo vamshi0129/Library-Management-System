@@ -7,13 +7,11 @@ public class Main {
         Library lib = new Library();
 
         while (true) {
-            System.out.println("\n1.Add Book 2.Add User 3.Search 4.Issue 5.Return 6.Exit");
-            int choice = sc.nextInt();
+            int ch = sc.nextInt();
 
-            switch (choice) {
+            switch (ch) {
 
                 case 1:
-                    System.out.print("Enter id, title, author: ");
                     int id = sc.nextInt();
                     String title = sc.next();
                     String author = sc.next();
@@ -21,26 +19,27 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.print("Enter user id and name: ");
                     int uid = sc.nextInt();
                     String name = sc.next();
                     lib.addUser(uid, name);
                     break;
 
                 case 3:
-                    System.out.print("Enter keyword: ");
                     String key = sc.next();
                     lib.searchBook(key);
                     break;
 
                 case 4:
-                    System.out.print("Enter bookId userId day: ");
-                    lib.issueBook(sc.nextInt(), sc.nextInt(), sc.nextInt());
+                    int b_id = sc.nextInt();
+                    int u_id = sc.nextInt();
+                    int days = sc.nextInt();
+                    lib.issueBook(b_id, u_id, days);
                     break;
 
                 case 5:
-                    System.out.print("Enter bookId and return day: ");
-                    lib.returnBook(sc.nextInt(), sc.nextInt());
+                    int B_id = sc.nextInt();
+                    int f = sc.nextInt();
+                    lib.returnBook(B_id, f);
                     break;
 
                 case 6:
