@@ -16,7 +16,7 @@ This is a java (swing) based application that manages book , users , transaction
 ---
 ## Setup
 
-- place all files in same file names java
+- place all files in same file named java
 - Compile all by  javac .*java
 - Run the UI  java LibraryGUI
 
